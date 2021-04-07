@@ -12,6 +12,10 @@ export default {
   name: 'App',
   computed: {
     ...mapState(['test'])
+  },
+  async mounted(){
+    const seller = await this.$axios.get('/api/seller')
+    console.log(seller)
   }
 }
 </script>
